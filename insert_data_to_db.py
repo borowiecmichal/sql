@@ -10,9 +10,9 @@ def dodaj_autora(first_name, last_name):
     cursor.execute(sql)
     conn.close()
 
-def add_book(title):
+def add_book(title, author):
     sql=f"""
-    INSERT INTO book (title, id_author) VALUES ('{title}', 1)
+    INSERT INTO book (title, id_author) VALUES ('{title}', {author})
     """
     conn = connect()
     cursor = conn.cursor()

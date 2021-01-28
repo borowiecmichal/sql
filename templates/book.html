@@ -1,8 +1,15 @@
 {%extends 'base.html'%}
 {%block zawartosc%}
 <form method="post">
-    <p>Nazwa ksiazki: <input type="text" name="title""></p>
+    <p>Nazwa ksiazki: <input type="text" name="title"></p>
     <p><input type="submit" value="DODAJ"></p>
+    <p>
+        <select name="author">
+            {%for author in authors%}
+                <option value="{{author.0}}">{{author.1}} {{author.2}}</option>
+            {%endfor%}
+        </select>>
+    </p>
 </form>
 <ul>
     {% for book in books%}

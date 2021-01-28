@@ -24,7 +24,7 @@ def book():
     if request.method == 'POST':
         add_book(**request.form)
     books_lst = get_books()
-    return render_template('book.html', books=books_lst)
+    return render_template('book.html', books=books_lst, authors=get_authors())
 
 
 if __name__ == '__main__':
