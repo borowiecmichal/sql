@@ -5,4 +5,9 @@
     <p>Nazwisko: <input type="text" name="last_name"></p>
     <p><input type="submit" value="DODAJ"></p>
 </form>
+<ul>
+    {% for author in authors %}
+        <li>{{author.1}} {{author.2}}</li>
+    {%endfor%}
+</ul>
 {%endblock%}
