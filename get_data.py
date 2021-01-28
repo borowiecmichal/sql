@@ -11,5 +11,16 @@ def get_authors():
     conn.close()
     return data
 
+def get_books():
+    sql="""
+    SELECT * from book
+    """
+    conn = connect()
+    cursor = conn.cursor()
+    cursor.execute(sql)
+    data = cursor.fetchall()
+    conn.close()
+    return data
+
 if __name__ == '__main__':
     get_authors()
