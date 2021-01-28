@@ -7,5 +7,12 @@ app = Flask(__name__)
 def main():
     return render_template("base.html")
 
+@app.route('/add_authors')
+def author():
+    return  render_template("author.html")
+
+
+
+
 if __name__ == '__main__':
     app.run()
